@@ -5,20 +5,6 @@ public class Info
 {
 	public static void main(String[] args)
 	{
-		/*   Indexes of info in the array
-		 *0  - call date time
-		 *1  - call number
-		 *2  - description
-		 *3  - district
-		 *4  - incident location
-		 *5  - location
-		 *6  - location address
-		 *7  - location city
-		 *8  - location state
-		 *9  - location zip
-		 *10 - priority
-		 *11 - record id
-		 */
 		String unorganizedInput = "\"2019-02-11T12:15:00.000\",\"P190421400\",\"ASSIST OFFICER\",\"CD\",\"BOOKER T WASHINGTON MIDDLE\",,,\"BOOKER T WASHINGTON MIDDLE BALTIMORE\",\"MD\",,\"Emergency\",\"4242711\"\r\n" + 
 				"\"2019-02-10T19:37:00.000\",\"P190412734\",\"ASSIST FIRE DEPT\",\"WD\",\"800 VINE ST\",\"POINT (-76.629806 39.290575)\",\"800 VINE ST\",\"BALTIMORE\",\"MD\",,\"Emergency\",\"4240973\"\r\n" + 
 				"\"2019-02-08T15:09:00.000\",\"P190392439\",\"ASSIST FIRE DEPT\",\"NE\",\"BELAIR RD/CHESTERFIELD AV\",,\"BELAIR RD\",\"BALTIMORE\",\"MD\",,\"Emergency\",\"4233355\"\r\n" + 
@@ -67,7 +53,23 @@ public class Info
 			}
 		}
 
-		printCol(data, 5);
+		/*   Indexes of info in the array
+		 *0  - call date time
+		 *1  - call number
+		 *2  - description
+		 *3  - district
+		 *4  - incident location
+		 *5  - location
+		 *6  - location address
+		 *7  - location city
+		 *8  - location state
+		 *9  - location zip
+		 *10 - priority
+		 *11 - record id
+		 *printData(data) prints everything
+		 *printRow(data, row) prints a specific call
+		 *printCol(data, col) REFER TO COL DATA ABOVE
+		 */
 		
 	}
 	
