@@ -1,7 +1,11 @@
 
+
+
 Map of data, to get a clear idea of quantity, set data range to a week.
 http://gis.baltimorecity.gov/911/#
 
 
-The API for police calls
+The Socrata API for police calls
 https://dev.socrata.com/foundry/data.baltimorecity.gov/m8g9-abgb
+
+Demo of Socrata API and Google Maps
