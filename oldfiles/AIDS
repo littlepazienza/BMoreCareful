@@ -1,0 +1,39 @@
+
+public class Incident {
+	
+	String calldatetime;
+	String callnumber;
+	String description;
+	String district;
+	String incidentlocation;
+	String location;
+	String location_address;
+	String location_city;
+	String location_state;
+	String location_zip;
+	String priority;
+	String recordid;
+	
+	public Incident(String a, String b, String c, String d, String e, String f, String g, String h, String i, String j, String k, String l)
+	{
+		calldatetime = a;
+		callnumber = b;
+		description = c;
+		district = d;
+		incidentlocation = e;
+		location = f;
+		location_address = g;
+		location_city = h;
+		location_state = i;
+		location_zip = j;
+		priority = k;
+		recordid = l;
+	}
+	
+	public void print()
+	{
+		System.out.println(calldatetime+" "+callnumber+" "+description+" "+district+" "
+									   +incidentlocation+" "+location+" "+location_address+" "
+				                       +location_city+" "+location_state+" "+location_zip+" "+priority+" "+recordid);
+	}
+}
