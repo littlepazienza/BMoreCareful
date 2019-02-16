@@ -11,12 +11,54 @@ https://dev.socrata.com/foundry/data.baltimorecity.gov/m8g9-abgb
 Demo of Socrata API and Google Maps
 https://dev.socrata.com/blog/2014/05/31/google-maps.html
 
-
-"calldatetime","callnumber","description","district","incidentlocation","location","location_address","location_city","location_state","location_zip","priority","recordid"
-"2019-02-11T12:15:00.000","P190421400","ASSIST OFFICER","CD","BOOKER T WASHINGTON MIDDLE",,,"BOOKER T WASHINGTON MIDDLE BALTIMORE","MD",,"Emergency","4242711"
-"2019-02-10T19:37:00.000","P190412734","ASSIST FIRE DEPT","WD","800 VINE ST","POINT (-76.629806 39.290575)","800 VINE ST","BALTIMORE","MD",,"Emergency","4240973"
-"2019-02-08T15:09:00.000","P190392439","ASSIST FIRE DEPT","NE","BELAIR RD/CHESTERFIELD AV",,"BELAIR RD","BALTIMORE","MD",,"Emergency","4233355"
-"2019-02-03T22:35:00.000","P190343004","Immediate Inc","CD","600 MUCCULLUGH CIRCLE",,"600 MUCCULLUGH CIRCLE","BALTIMORE","MD",,"Emergency","4216047"
-"2019-02-03T14:33:00.000","P190341582","Immediate Inc","WD","800 N FREMONT AV","POINT (-76.633988 39.298211)","800 N FREMONT AV","BALTIMORE","MD",,"Emergency","4214761"
-"2019-02-01T11:47:00.000","P190321204","ASSIST FIRE DEPT","ED","900 MC KIM ST",,"900 MC KIM ST","BALTIMORE","MD",,"Emergency","4208228"
-"2019-01-31T23:51:00.000","P190313729","Immediate Inc","SE","E FAYETTE ST/N PORT ST",,"E FAYETTE ST","ST BALTIMORE","MD",,"Emergency","4207125"
+[
+    {
+        "calldatetime": "2015-10-06T12:47:00.000",
+        "callnumber": "P152791360",
+        "description": "ASSIST FIRE DEPT",
+        "district": "SW",
+        "incidentlocation": "400 N EDGEWOOD ST",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -76.675427,
+                39.291984
+            ]
+        },
+        "location_address": "400 N EDGEWOOD ST",
+        "location_city": "BALTIMORE",
+        "location_state": "MD",
+        "priority": "Emergency",
+        "recordid": "826086"
+    },
+    {
+        "calldatetime": "2015-01-04T12:12:00.000",
+        "callnumber": "150040938",
+        "description": "Mental Case",
+        "district": "SW",
+        "incidentlocation": "3400 CLIFTON AV",
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                -76.674237,
+                39.310989
+            ]
+        },
+        "location_address": "3400 CLIFTON AV",
+        "location_city": "BALTIMORE",
+        "location_state": "MD",
+        "priority": "Emergency",
+        "recordid": "8235"
+    },
+    {
+        "calldatetime": "2015-10-05T13:15:00.000",
+        "callnumber": "P152781421",
+        "description": "ASSIST OFFICER",
+        "district": "NE",
+        "incidentlocation": "GORSUCH AV/KENNEDY AV",
+        "location_address": "GORSUCH AV",
+        "location_city": "BALTIMORE",
+        "location_state": "MD",
+        "priority": "Emergency",
+        "recordid": "823043"
+    },
