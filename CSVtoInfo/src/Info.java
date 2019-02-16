@@ -33,6 +33,12 @@ public class Info
 			while(input.hasNextLine())
 			{
 				String temp = input.nextLine();
+				
+				temp = temp.replace("\"", "");
+				temp = temp.replace("POINT", "");
+				temp = temp.replace("(", "");
+				temp = temp.replace(")", "");
+				
 				String[] tempArr = new String[12];
 				
 				Scanner line = new Scanner(temp);
@@ -46,11 +52,22 @@ public class Info
 				}
 				
 				data.add(tempArr);
+				line.close();
+			}
+		}
+		
+		for (int i = 0; i < data.size(); i++) 
+		{
+			for (int j = 0; j < data.get(i).length; j++) 
+			{
+				if(data.get(i)[j].equals(""))
+				{
+					data.get(i)[j] = "NODATA";
+				}
 			}
 		}
 
-		printData(data);
-		printCol(data, 3);
+		printCol(data, 5);
 		
 	}
 	
@@ -72,5 +89,14 @@ public class Info
 		{
 		    System.out.println(data.get(i)[col]);
 		}
-	} 
+	}
+	
+	public static void printRow(ArrayList<String[]> data, int row)
+	{
+		for(int i = 0; i < data.get(row).length; i++)
+		{
+		    System.out.print(data.get(row)[i]+" ");
+		}
+		System.out.println();
+	}
 }
