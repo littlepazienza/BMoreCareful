@@ -1,0 +1,19 @@
+#!/bin/bash
+
+while true
+do
+	BEGINNING="https://data.baltimorecity.gov/resource/m8g9-abgb.csv?\$where=calldatetime between '"
+	FROM=`date +'%Y-%m-%dT%T' --date '2 days ago'`
+  AND="' and '"
+	TO=`date +'%Y-%m-%dT%T'`
+  END="'"
+ 
+	A="$BEGINNING$FROM$AND$TO$END"
+  echo $A > file.out
+  wget -i file.out
+  mv m8g9* data.csv
+  
+	sleep 15m
+done
+
+
