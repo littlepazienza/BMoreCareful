@@ -97,6 +97,25 @@ public class Info
 	}
 	
 	
+	
+	
+	
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	public static String getFile() {
 		
 		String hostName = "66.175.216.86";

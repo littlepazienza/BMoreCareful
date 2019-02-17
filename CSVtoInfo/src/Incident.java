@@ -41,48 +41,52 @@ public class Incident {
 	{
 		if(location.equals("NODATA"))
 		{
-			URL url;
-			String key = "AIzaSyAyZq5txQIJBAR9PtokiqNWc37aFUy_J_A";
-			String link = "https://maps.googleapis.com/maps/api/geocode/json?address="+location_address+location_city+location_state+location_zip+"&key="+key;
-			try 
+			if(!location_address.equals("NODATA"))
 			{
-				url = new URL(link);
-				URLConnection con = url.openConnection();
-				InputStream is = con.getInputStream();
-				BufferedReader br = new BufferedReader(new InputStreamReader(is));
-				String line = null;
-				while((line = br.readLine()) != null)
+				URL url;
+				String key = "AIzaSyAyZq5txQIJBAR9PtokiqNWc37aFUy_J_A";
+				String link = "https://maps.googleapis.com/maps/api/geocode/json?address="+location_address+location_city+location_state+location_zip+"&key="+key;
+				try 
 				{
-					if(line.contains("\"location\""))
+					url = new URL(link);
+					URLConnection con = url.openConnection();
+					InputStream is = con.getInputStream();
+					BufferedReader br = new BufferedReader(new InputStreamReader(is));
+					String line = null;
+					while((line = br.readLine()) != null)
 					{
-						String lat = br.readLine();
-						String lng = br.readLine();
-						
-						lat = lat.replace("\"", "");
-						lat = lat.replace("lat", "");
-						lat = lat.replace("lng", "");
-						lat = lat.replace(":", "");
-						lat = lat.replace(",", "");
-						lat = lat.replace(" ", "");
-						lat = lat.trim();
-						
-						lng = lng.replace("\"", "");
-						lng = lng.replace("lat", "");
-						lng = lng.replace("lng", "");
-						lng = lng.replace(":", "");
-						lng = lng.replace(",", "");
-						lng = lng.replace(" ", "");
-						lng = lng.trim();
-						String dest = lat+" "+lng;
-						location = dest;
+						if(line.contains("\"location\""))
+						{
+							String lat = br.readLine();
+							String lng = br.readLine();
+							
+							lat = lat.replace("\"", "");
+							lat = lat.replace("lat", "");
+							lat = lat.replace("lng", "");
+							lat = lat.replace(":", "");
+							lat = lat.replace(",", "");
+							lat = lat.replace(" ", "");
+							lat = lat.trim();
+							
+							lng = lng.replace("\"", "");
+							lng = lng.replace("lat", "");
+							lng = lng.replace("lng", "");
+							lng = lng.replace(":", "");
+							lng = lng.replace(",", "");
+							lng = lng.replace(" ", "");
+							lng = lng.trim();
+							String dest = lat+" "+lng;
+							System.out.println(dest);
+							location = dest;
+						}
 					}
+				} 
+				catch (MalformedURLException e) 
+				{
+					System.err.println("Error reading from link");
+				} catch (IOException e) {
+					System.err.println("Not data found");
 				}
-			} 
-			catch (MalformedURLException e) 
-			{
-				System.err.println("Error reading from link");
-			} catch (IOException e) {
-				System.err.println("Not data found");
 			}
 		}
 	}
